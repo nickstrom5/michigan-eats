@@ -1,0 +1,7 @@
+DerivedData*/
+data/
+site/
+.venv/
+*.pkl
+__pycache__/
+LOCAL.md
