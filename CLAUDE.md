@@ -56,9 +56,12 @@ from every field (QA 2026-10-19 P0 #1). Re-run before each submission.
 
 ## App
 - `xcodegen generate`; build and archive with the public Xcode: `DEVELOPER_DIR="/Applications/Xcode 1.app/Contents/Developer"`.
-- Own simulator "MI Eats 6.9" (iPhone 17 Pro Max, iOS 27.0; udid in `data/sim-iphone.txt`). Shut it down after use; check
-  `ps -u $(id -u) | wc -l` first.
-- `MichiganEatsTests`: 24/24 pass (2026-10-22, with the verified links bundled). `MichiganEatsUITests` adapted to Michigan's guides, not yet run.
+- Own simulators "MI Eats 6.9" (iPhone 17 Pro Max, iOS 27.0; udid in `data/sim-iphone.txt`) and "MI Eats iPad 13" (iPad Pro 13-inch M5,
+  iOS 27.0; `data/sim-ipad.txt`). One at a time; shut each down after use; check `ps -u $(id -u) | wc -l` first.
+- `MichiganEatsTests`: 24/24 pass (2026-10-22, with the verified links bundled). `MichiganEatsUITests` (signed): 2026-10-22 all
+  pass on iPhone and iPad (tour, Everything layer, my location, outside Michigan, accessibility audit). `testLaunchIsQuick` skipped both
+  times under load (6.1 s iPhone at load 145, 5.7 s iPad at load 24; limit 6 s): re-measure on a quiet Mac. Audit notes are the family's
+  known ones (display-font size cap, captions under the tab bar, Apple Maps' "Legal" link).
 - Screens: `-screenshot <home|coney|pizza|pasty|detail|map|honors|oldest|saved|about>` (DEBUG; downtown Detroit).
 
 ## Outward actions need Nick's explicit yes, every time

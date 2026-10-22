@@ -8,7 +8,7 @@ import CoreLocation
 @MainActor
 final class PerformanceTests: XCTestCase {
     private static var shared: AppModel?
-    private let austin = CLLocation(latitude: 30.2686, longitude: -97.7428)
+    private let detroit = CLLocation(latitude: 42.3315, longitude: -83.0466)   // downtown Detroit (Campus Martius)
 
     private func model() async -> AppModel {
         if let m = Self.shared { return m }
@@ -42,10 +42,10 @@ final class PerformanceTests: XCTestCase {
         measure(metrics: [XCTClockMetric()], options: three) { _ = Ranking.sort(places, by: .name, from: nil) }
     }
 
-    /// Nearest first from downtown Austin: Near Me and every Nearest sort.
+    /// Nearest first from downtown Detroit: Near Me and every Nearest sort.
     func testSpeedSortNearest() async {
         let places = await model().places.filter { !$0.isVenue }
-        let here = austin
+        let here = detroit
         measure(metrics: [XCTClockMetric()], options: three) { _ = Ranking.sort(places, by: .nearest, from: here) }
     }
 
@@ -60,7 +60,7 @@ final class PerformanceTests: XCTestCase {
     /// Five iPad row taps on Near Me: the list's body runs again with nothing changed.
     func testSpeedRowTaps() async {
         let m = await model()
-        let here = austin
+        let here = detroit
         measure(metrics: [XCTClockMetric()], options: three) {
             for _ in 0..<5 { _ = m.list(.nearMe, sort: .nearest, search: "", here: here) }
         }
