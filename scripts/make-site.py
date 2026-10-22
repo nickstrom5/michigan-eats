@@ -1364,7 +1364,7 @@ page("explore/index.html", title, desc, body, [webapp_ld, bc], extra_css=EXPLORE
 # alt text says what each capture shows (docs/screenshots, made by scripts/capture-screenshots.sh; copies by scripts/site-images.sh)
 shots = [("home", "The Michigan Eats home screen: a search box and guide cards for Coney Islands, Detroit-Style Pizza, Pasties and Pączki, each with its count of places.", "A guide for each Michigan craving."),
          ("coney", "The hand-checked coney island list in Michigan Eats, nearest first, with each place's town, kind and distance.", "Coney islands nearest you."),
-         ("detail", "Lafayette Coney Island in Michigan Eats: its address, coney island tag, a button for Apple Maps' ratings, hours and photos, Directions and Call buttons, a small map, the hand-checked note and the Detroit Health Department's inspection results.", "Each place, with the City's own inspections."),
+         ("detail", "American Coney Island in Michigan Eats: its address, coney island tag, a button for Apple Maps' ratings, hours and photos, Directions and Call buttons, a small map, the hand-checked note and the Detroit Health Department's inspection results.", "Each place, with the City's own inspections."),
          ("map", "The Michigan Eats map around downtown Detroit, with pins for hand-checked places and filter buttons for coneys, inspections and honors.", "The map, by guide."),
          ("honors", "The James Beard honors list in Michigan Eats.", "James Beard honorees.")]
 shot_html = []

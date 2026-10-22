@@ -63,6 +63,10 @@ from every field (QA 2026-10-19 P0 #1). Re-run before each submission.
   times under load (6.1 s iPhone at load 145, 5.7 s iPad at load 24; limit 6 s): re-measure on a quiet Mac. Audit notes are the family's
   known ones (display-font size cap, captions under the tab bar, Apple Maps' "Legal" link).
 - Screens: `-screenshot <home|coney|pizza|pasty|detail|map|honors|oldest|saved|about>` (DEBUG; downtown Detroit).
+- App Store screenshots (2026-10-22): raw captures in `playbook/app-store/raw/<iphone|ipad>/` (`OUT=... SLEEP=14 scripts/capture-screenshots.sh`,
+  the map with a ~20 s wait), framed by `scripts/appstore-screenshots.py` into `playbook/app-store/iphone/` (8, 1320x2868) and `ipad/`
+  (6, 2064x2752), all git-ignored. No shot shows a place whose latest Detroit result is "Not in compliance": screenshot mode uses American
+  Coney Island (Lafayette's January 2026 inspection wasn't in compliance). Captions carry no "free", no ranking and no award body's name.
 
 ## Outward actions need Nick's explicit yes, every time
 Public repo, pushes, Pages, App Store Connect, uploads, emails. Never submit for review. Support email: nick@eatsranked.com.

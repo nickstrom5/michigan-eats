@@ -24,11 +24,13 @@ enum ScreenshotMode {
         // downtown Detroit (Campus Martius), so "nearest" lists have distances without a permission prompt
         model.screenshotLocation = CLLocation(latitude: 42.3315, longitude: -83.0466)
         // by name and town, ignoring case, so a rebuild with a slightly different casing still finds the place; the hand-checked one first
+        // App Store rule: no screenshot shows a place whose latest Detroit result is "Not in compliance" (Lafayette's was, Jan 2026),
+        // so the coney shots use American Coney Island (in compliance)
         let pick = { (n: String, town: String?) -> Place? in
             let hits = model.places.filter { $0.name.caseInsensitiveCompare(n) == .orderedSame && (town == nil || $0.city == town) }
             return hits.first(where: \.handChecked) ?? hits.first
         }
-        for p in [pick("Lafayette Coney Island", "Detroit"), pick("Buddy's Pizza", "Detroit"), pick("Lehto's Pasties", "St. Ignace")]
+        for p in [pick("American Coney Island", "Detroit"), pick("Buddy's Pizza", "Detroit"), pick("Lehto's Pasties", "St. Ignace")]
             .compactMap({ $0 }) where !model.isSaved(p) {
             model.toggleSaved(p)
         }
@@ -44,7 +46,7 @@ enum ScreenshotMode {
         case "oldest": open(.oldest)
         case "detail":
             open(.coney)
-            if let p = pick("Lafayette Coney Island", "Detroit") ?? model.places.first { model.selectedPlace = p; model.guidesPath.append(.place(p)) }
+            if let p = pick("American Coney Island", "Detroit") ?? model.places.first { model.selectedPlace = p; model.guidesPath.append(.place(p)) }
         case "map": model.tab = .map
         case "saved": model.tab = .saved
         case "about": model.tab = .about
@@ -54,14 +56,14 @@ enum ScreenshotMode {
         // honored or hand-checked one per shot.
         guard UIDevice.current.userInterfaceIdiom == .pad, model.selectedPlace == nil else { return }
         let place: Place? = switch name {
-        case "home": pick("American Coney Island", "Detroit")
-        case "coney": pick("Lafayette Coney Island", "Detroit")
+        case "home": pick("Buddy's Pizza", "Detroit")
+        case "coney": pick("American Coney Island", "Detroit")
         case "pizza": pick("Buddy's Pizza", "Detroit")
-        case "map": pick("Lafayette Coney Island", "Detroit")
+        case "map": pick("American Coney Island", "Detroit")
         case "pasty": pick("Lehto's Pasties", "St. Ignace")
         case "saved", "oldest", "honors": pick("Lehto's Pasties", "St. Ignace")
         case "about": nil
-        default: pick("Lafayette Coney Island", "Detroit")
+        default: pick("American Coney Island", "Detroit")
         }
         model.selectedPlace = place
     }

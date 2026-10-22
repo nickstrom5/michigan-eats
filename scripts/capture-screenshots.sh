@@ -10,7 +10,7 @@ DEVICE="${1:?simulator name or UDID}"
 shift
 SCREENS=("$@")
 [ ${#SCREENS[@]} -gt 0 ] || SCREENS=(home coney pizza pasty detail map honors oldest saved about)
-OUT="$(cd "$(dirname "$0")/.." && pwd)/docs/screenshots"
+OUT="${OUT:-$(cd "$(dirname "$0")/.." && pwd)/docs/screenshots}"
 PREFIX="${PREFIX:-}"
 WAIT="${SLEEP:-6}"
 MIN_BYTES=120000
