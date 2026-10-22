@@ -11,8 +11,12 @@ Products (same three as every state):
   `com.michiganeats.ios`. Nick 2026-10-22 (`playbook/05-naming.md`): icon = Detroit coney on deep lake #0D3F63 (`scripts/make-brand.swift`,
   passes `../state-prompts/icon-style/check.swift`); palette Great Lakes blue #1B6EA8 + pine #2E5E47 (`Design/Theme.swift`); header = a
   Great Lakes shoreline band (`Stripes`). No MICHELIN Guide in Michigan, so no Bib Gourmand filter.
-- **Website** (generated `docs/`): not built yet. Planned at michigan.eatsranked.com (Nick adds Cloudflare `CNAME michigan →
-  nickstrom5.github.io`, DNS only); until then nickstrom5.github.io/michigan-eats/ (`App/Links.swift`).
+- **Website** (generated `docs/`, never hand-edited): `scripts/make-site.py` (15 pages: guides with 4+ places, James Beard, the Detroit
+  inspections explainer, city pages for Detroit and Dearborn, the web app at /explore/ from `scripts/explore.js`, privacy, terms). Not
+  published: planned at michigan.eatsranked.com (Nick adds Cloudflare `CNAME michigan → nickstrom5.github.io`, DNS only; then build with
+  `MI_DOMAIN=michigan.eatsranked.com`); until then nickstrom5.github.io/michigan-eats/ (`App/Links.swift`). `scripts/qa-site.py`: full run
+  OK 2026-10-22 (375 and 1280 px, web app, dark mode); its Michigan inspections check fails on a broken copy as it should. Screens:
+  `scripts/capture-screenshots.sh <udid>` (the map needs `SLEEP=20` on a busy Mac), then `scripts/site-images.sh`, then make-site again.
 
 ## Sources (details, terms and checks: `playbook/12-sources.md`)
 - **MDARD "Michigan Restaurants and Commissaries"** (gisagomdard.state.mi.us FeatureServer): 34,310 active food service licenses from all
@@ -45,7 +49,8 @@ cd pipeline && ../.venv/bin/python listings.py && ../.venv/bin/python geocode_of
 MI_APP=1 .venv/bin/python pipeline/michigan.py && cp data/app/places.json data/app/detail-*.json MichiganEats/Resources/
 .venv/bin/python scripts/make-leaderboard.py                                                # site/index.html
 ```
-Website links: `pipeline/check_websites.py` (reads `data/mi/website_candidates.json` from the app export) → `data/mi/website_check.json`;
+Website links: `pipeline/check_websites.py` (reads `data/mi/website_candidates.json` from the app export) → `data/mi/website_check.json`
+(2026-10-22: 11,625 of 19,114 links verified; 172 gambling/adult and ~50 hacked pages dropped);
 back the file up before stopping a run. The export ships only links it passed, and `link_blocklist.scrub()` removes every blocklisted link
 from every field (QA 2026-10-19 P0 #1). Re-run before each submission.
 
@@ -53,7 +58,7 @@ from every field (QA 2026-10-19 P0 #1). Re-run before each submission.
 - `xcodegen generate`; build and archive with the public Xcode: `DEVELOPER_DIR="/Applications/Xcode 1.app/Contents/Developer"`.
 - Own simulator "MI Eats 6.9" (iPhone 17 Pro Max, iOS 27.0; udid in `data/sim-iphone.txt`). Shut it down after use; check
   `ps -u $(id -u) | wc -l` first.
-- `MichiganEatsTests`: 24/24 pass (2026-10-22). `MichiganEatsUITests` adapted to Michigan's guides, not yet run.
+- `MichiganEatsTests`: 24/24 pass (2026-10-22, with the verified links bundled). `MichiganEatsUITests` adapted to Michigan's guides, not yet run.
 - Screens: `-screenshot <home|coney|pizza|pasty|detail|map|honors|oldest|saved|about>` (DEBUG; downtown Detroit).
 
 ## Outward actions need Nick's explicit yes, every time

@@ -1,0 +1,438 @@
+{
+ "generated": "2026-10-22",
+ "domain": "https://nickstrom5.github.io/michigan-eats",
+ "restaurants": 24830,
+ "places_incl_hidden": 26491,
+ "towns": 988,
+ "counties": 83,
+ "on_an_official_list": 19643,
+ "serves_alcohol_detroit": 411,
+ "hand_checked_on_a_guide": 38,
+ "guide_coney": 8,
+ "guide_dpizza": 6,
+ "guide_pasty": 4,
+ "guide_paczki": 13,
+ "guide_mideast": 7,
+ "guide_fishfry": 0,
+ "guide_pages": [
+  "coney",
+  "dpizza",
+  "pasty",
+  "paczki",
+  "mideast"
+ ],
+ "oldest": 1,
+ "honors": 13,
+ "james_beard": 13,
+ "americas_classics": 2,
+ "inspection_results": 1134,
+ "inspection_bands": {
+  "Detroit": {
+   "Not in compliance": 246,
+   "In compliance": 888
+  }
+ },
+ "inspections_through": {
+  "det": "2026-10-05"
+ },
+ "liquor_updated": "2026-10-22",
+ "licenses_updated": "2026-10-22",
+ "mdard_active_licenses": 34310,
+ "city_pages": {
+  "Detroit": {
+   "restaurants": 2287,
+   "listed": 19,
+   "coney": 8,
+   "dpizza": 4,
+   "pasty": 0,
+   "paczki": 2,
+   "mideast": 0,
+   "hon": 5,
+   "oldest": 0,
+   "inspection_results": 1134,
+   "inspection_bands": {
+    "Not in compliance": 246,
+    "In compliance": 888
+   }
+  },
+  "Dearborn": {
+   "restaurants": 334,
+   "listed": 7,
+   "coney": 0,
+   "dpizza": 0,
+   "pasty": 0,
+   "paczki": 0,
+   "mideast": 7,
+   "hon": 1,
+   "oldest": 0,
+   "inspection_results": 0,
+   "inspection_bands": {}
+  }
+ },
+ "cities_without_a_page": {
+  "Hamtramck": 2,
+  "Ann Arbor": 2,
+  "Grand Rapids": 0,
+  "Traverse City": 2,
+  "Lansing": 0,
+  "Flint": 0,
+  "Hazel Park": 1,
+  "Livonia": 2,
+  "Warren": 1,
+  "Royal Oak": 0,
+  "Ferndale": 1,
+  "Marquette": 0,
+  "St. Ignace": 1,
+  "Houghton": 1,
+  "Frankenmuth": 1,
+  "Kalamazoo": 0,
+  "Saugatuck": 1
+ },
+ "noindex_pages": [],
+ "web_app_data_bytes": {
+  "data/core.json": {
+   "raw": 1937008,
+   "gzip": 408570
+  },
+  "data/detail-alcona-county.json": {
+   "raw": 2887,
+   "gzip": 593
+  },
+  "data/detail-alger-county.json": {
+   "raw": 6338,
+   "gzip": 1012
+  },
+  "data/detail-allegan-county.json": {
+   "raw": 35932,
+   "gzip": 5015
+  },
+  "data/detail-alpena-county.json": {
+   "raw": 10528,
+   "gzip": 1732
+  },
+  "data/detail-antrim-county.json": {
+   "raw": 10550,
+   "gzip": 1557
+  },
+  "data/detail-arenac-county.json": {
+   "raw": 5601,
+   "gzip": 914
+  },
+  "data/detail-baraga-county.json": {
+   "raw": 3143,
+   "gzip": 581
+  },
+  "data/detail-barry-county.json": {
+   "raw": 11684,
+   "gzip": 1755
+  },
+  "data/detail-bay-county.json": {
+   "raw": 35556,
+   "gzip": 4748
+  },
+  "data/detail-benzie-county.json": {
+   "raw": 11655,
+   "gzip": 1593
+  },
+  "data/detail-berrien-county.json": {
+   "raw": 66977,
+   "gzip": 8596
+  },
+  "data/detail-branch-county.json": {
+   "raw": 13386,
+   "gzip": 1838
+  },
+  "data/detail-calhoun-county.json": {
+   "raw": 46568,
+   "gzip": 5972
+  },
+  "data/detail-cass-county.json": {
+   "raw": 11309,
+   "gzip": 1543
+  },
+  "data/detail-charlevoix-county.json": {
+   "raw": 16433,
+   "gzip": 2427
+  },
+  "data/detail-cheboygan-county.json": {
+   "raw": 15428,
+   "gzip": 2238
+  },
+  "data/detail-chippewa-county.json": {
+   "raw": 13893,
+   "gzip": 2028
+  },
+  "data/detail-clare-county.json": {
+   "raw": 10311,
+   "gzip": 1359
+  },
+  "data/detail-clinton-county.json": {
+   "raw": 18814,
+   "gzip": 2798
+  },
+  "data/detail-crawford-county.json": {
+   "raw": 4762,
+   "gzip": 967
+  },
+  "data/detail-delta-county.json": {
+   "raw": 14400,
+   "gzip": 1919
+  },
+  "data/detail-dickinson-county.json": {
+   "raw": 11566,
+   "gzip": 1594
+  },
+  "data/detail-eaton-county.json": {
+   "raw": 38775,
+   "gzip": 5246
+  },
+  "data/detail-emmet-county.json": {
+   "raw": 19896,
+   "gzip": 3127
+  },
+  "data/detail-genesee-county.json": {
+   "raw": 131129,
+   "gzip": 16134
+  },
+  "data/detail-gladwin-county.json": {
+   "raw": 6368,
+   "gzip": 965
+  },
+  "data/detail-gogebic-county.json": {
+   "raw": 6505,
+   "gzip": 1123
+  },
+  "data/detail-grand-traverse-county.json": {
+   "raw": 49709,
+   "gzip": 6860
+  },
+  "data/detail-gratiot-county.json": {
+   "raw": 10925,
+   "gzip": 1559
+  },
+  "data/detail-hillsdale-county.json": {
+   "raw": 14784,
+   "gzip": 1923
+  },
+  "data/detail-houghton-county.json": {
+   "raw": 16802,
+   "gzip": 2250
+  },
+  "data/detail-huron-county.json": {
+   "raw": 14324,
+   "gzip": 1866
+  },
+  "data/detail-ingham-county.json": {
+   "raw": 107359,
+   "gzip": 13909
+  },
+  "data/detail-ionia-county.json": {
+   "raw": 15116,
+   "gzip": 2161
+  },
+  "data/detail-iosco-county.json": {
+   "raw": 11402,
+   "gzip": 1625
+  },
+  "data/detail-iron-county.json": {
+   "raw": 5986,
+   "gzip": 908
+  },
+  "data/detail-isabella-county.json": {
+   "raw": 25107,
+   "gzip": 3613
+  },
+  "data/detail-jackson-county.json": {
+   "raw": 48000,
+   "gzip": 6042
+  },
+  "data/detail-kalamazoo-county.json": {
+   "raw": 131183,
+   "gzip": 12618
+  },
+  "data/detail-kalkaska-county.json": {
+   "raw": 3472,
+   "gzip": 678
+  },
+  "data/detail-kent-county.json": {
+   "raw": 259531,
+   "gzip": 32679
+  },
+  "data/detail-keweenaw-county.json": {
+   "raw": 1642,
+   "gzip": 386
+  },
+  "data/detail-lake-county.json": {
+   "raw": 2992,
+   "gzip": 532
+  },
+  "data/detail-lapeer-county.json": {
+   "raw": 24975,
+   "gzip": 3329
+  },
+  "data/detail-leelanau-county.json": {
+   "raw": 13644,
+   "gzip": 1921
+  },
+  "data/detail-lenawee-county.json": {
+   "raw": 31157,
+   "gzip": 4296
+  },
+  "data/detail-livingston-county.json": {
+   "raw": 58394,
+   "gzip": 7537
+  },
+  "data/detail-luce-county.json": {
+   "raw": 2401,
+   "gzip": 561
+  },
+  "data/detail-mackinac-county.json": {
+   "raw": 14927,
+   "gzip": 2012
+  },
+  "data/detail-macomb-county.json": {
+   "raw": 314982,
+   "gzip": 38170
+  },
+  "data/detail-manistee-county.json": {
+   "raw": 9604,
+   "gzip": 1549
+  },
+  "data/detail-marquette-county.json": {
+   "raw": 26587,
+   "gzip": 3655
+  },
+  "data/detail-mason-county.json": {
+   "raw": 11656,
+   "gzip": 1742
+  },
+  "data/detail-mecosta-county.json": {
+   "raw": 11744,
+   "gzip": 1867
+  },
+  "data/detail-menominee-county.json": {
+   "raw": 7251,
+   "gzip": 1211
+  },
+  "data/detail-midland-county.json": {
+   "raw": 30199,
+   "gzip": 3875
+  },
+  "data/detail-missaukee-county.json": {
+   "raw": 3394,
+   "gzip": 737
+  },
+  "data/detail-monroe-county.json": {
+   "raw": 46115,
+   "gzip": 6113
+  },
+  "data/detail-montcalm-county.json": {
+   "raw": 17502,
+   "gzip": 2406
+  },
+  "data/detail-montmorency-county.json": {
+   "raw": 3156,
+   "gzip": 650
+  },
+  "data/detail-muskegon-county.json": {
+   "raw": 56054,
+   "gzip": 7342
+  },
+  "data/detail-newaygo-county.json": {
+   "raw": 12021,
+   "gzip": 1753
+  },
+  "data/detail-oakland-county.json": {
+   "raw": 536037,
+   "gzip": 67114
+  },
+  "data/detail-oceana-county.json": {
+   "raw": 8375,
+   "gzip": 1313
+  },
+  "data/detail-ogemaw-county.json": {
+   "raw": 7426,
+   "gzip": 1253
+  },
+  "data/detail-ontonagon-county.json": {
+   "raw": 2587,
+   "gzip": 436
+  },
+  "data/detail-osceola-county.json": {
+   "raw": 5615,
+   "gzip": 918
+  },
+  "data/detail-oscoda-county.json": {
+   "raw": 2819,
+   "gzip": 525
+  },
+  "data/detail-otsego-county.json": {
+   "raw": 14247,
+   "gzip": 2166
+  },
+  "data/detail-ottawa-county.json": {
+   "raw": 89476,
+   "gzip": 11140
+  },
+  "data/detail-presque-isle-county.json": {
+   "raw": 5664,
+   "gzip": 869
+  },
+  "data/detail-roscommon-county.json": {
+   "raw": 12764,
+   "gzip": 1639
+  },
+  "data/detail-saginaw-county.json": {
+   "raw": 75934,
+   "gzip": 9118
+  },
+  "data/detail-saint-clair-county.json": {
+   "raw": 50323,
+   "gzip": 6336
+  },
+  "data/detail-saint-joseph-county.json": {
+   "raw": 21222,
+   "gzip": 2690
+  },
+  "data/detail-sanilac-county.json": {
+   "raw": 14054,
+   "gzip": 1941
+  },
+  "data/detail-schoolcraft-county.json": {
+   "raw": 4014,
+   "gzip": 726
+  },
+  "data/detail-shiawassee-county.json": {
+   "raw": 20767,
+   "gzip": 2726
+  },
+  "data/detail-tuscola-county.json": {
+   "raw": 10882,
+   "gzip": 1610
+  },
+  "data/detail-van-buren-county.json": {
+   "raw": 27696,
+   "gzip": 3633
+  },
+  "data/detail-washtenaw-county.json": {
+   "raw": 143494,
+   "gzip": 18011
+  },
+  "data/detail-wayne-county.json": {
+   "raw": 852419,
+   "gzip": 115980
+  },
+  "data/detail-wexford-county.json": {
+   "raw": 13385,
+   "gzip": 2025
+  },
+  "data/ids.json": {
+   "raw": 322818,
+   "gzip": 187102
+  },
+  "data/mi_shapes.json": {
+   "raw": 55024,
+   "gzip": 14249
+  }
+ }
+}
