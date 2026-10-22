@@ -21,7 +21,7 @@ Products (same three as every state):
 - **Detroit Health Department inspections** (data.detroitmi.gov, the portal's own CSV download): shown as the City publishes them, the
   latest **routine** inspection's `is_in_compliance` ("In compliance" / "Not in compliance") plus Priority / Priority Foundation / Core
   counts. Attempted visits, closures and complaints all read "True" in that field, so they are never shown. No placard colour is implied.
-  Detroit's portal publishes no license text: confirm with Nick before the public app ships Detroit data.
+  Detroit's portal publishes no license text; Nick approved showing the results as published in the public app (2026-10-22).
 - **Detroit liquor licenses** (the City's monthly copy of the MLCC list): "serves alcohol" in Detroit only. The MLCC statewide list is on
   michigan.gov (bot check): Nick can download it by hand into `data/raw/official/manual/`.
 - No other health department publishes in bulk (Oakland, Washtenaw, Wayne: search only; Kent, Kalamazoo: bot check; Ingham, Macomb:
