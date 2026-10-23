@@ -68,5 +68,11 @@ from every field (QA 2026-10-19 P0 #1). Re-run before each submission.
   (6, 2064x2752), all git-ignored. No shot shows a place whose latest Detroit result is "Not in compliance": screenshot mode uses American
   Coney Island (Lafayette's January 2026 inspection wasn't in compliance). Captions carry no "free", no ranking and no award body's name.
 
+## App Store copy
+`scripts/make-listing.py` writes `playbook/06-app-store-listing.md`, `13-app-review-reply.md` and `app-store/listing.json` from
+`site-numbers.json` (run it after make-site.py); it refuses to write on a length overrun, a keyword repeating a name/subtitle word, or a
+"best"/"top"/"#1"/"free" in the short fields. `../scripts/asc_listing.py` needs one FOLDERS line (`"com.michiganeats.ios": "mi-eats"`)
+once Nick creates the App Store Connect record.
+
 ## Outward actions need Nick's explicit yes, every time
 Public repo, pushes, Pages, App Store Connect, uploads, emails. Never submit for review. Support email: nick@eatsranked.com.
