@@ -76,7 +76,7 @@ R('placeholder="Search name, town, street, zip, “fish fry”…"', 'placeholde
 
 # ---------------- constants
 R('const TAGS = [["supper","Supper clubs",1],["fishfry","Fish fry",2],["custard","Frozen custard",8],["curds","Cheese curds",4]];',
-  'let HAVE_TAGS = 0;\nconst TAGS_ALL = [["coney","Coney islands",1],["dpizza","Detroit-style pizza",2],["pasty","Pasties",4],["paczki","Pączki bakeries",8],["mideast","Middle Eastern",16],["fishfry","Fish fry & supper clubs",32],["oldest","Oldest places",64]];\nlet TAGS = [];')
+  'let HAVE_TAGS = 0;\nconst TAGS_ALL = [["coney","Coney islands",1],["dpizza","Detroit-style pizza",2],["pasty","Pasties",4],["paczki","Pączki bakeries",8],["mideast","Middle Eastern",16],["fishfry","Great Lakes fish",32],["oldest","Oldest places",64]];\nlet TAGS = [];')
 R('const JUR = ["", "City of Milwaukee", "Public Health Madison & Dane County"];', 'const JUR = ["", "food-service license (MDARD list)", "Detroit Health Department establishment record", "Detroit liquor license (MLCC)"];')
 R('research:"our verified list, placed with its Google listing"', 'research:"our hand-checked list, placed on its street address"')
 R('try { S = sanitize(JSON.parse(localStorage.getItem("wi-eats") || "null")); }', 'try { S = sanitize(JSON.parse(localStorage.getItem("mi-eats") || "null")); }')
@@ -153,7 +153,7 @@ R('''  if ((r.hon & 16) && !(r.hon & 7)) h += `<span class="badge icon">Icon</sp
   if (r.tags & 4) h += `<span class="badge sc">Pasties</span>`;
   if (r.tags & 8) h += `<span class="badge sc">Pączki</span>`;
   if (r.tags & 16) h += `<span class="badge sc">Middle Eastern</span>`;
-  if (r.tags & 32) h += `<span class="badge sc">Fish fry</span>`;''')
+  if (r.tags & 32) h += `<span class="badge sc">Great Lakes fish</span>`;''')
 R('''  if (r.ff_n >= 3 && b.id !== "fishfry") bits.push(`<span>${r.ff_n} <i>fish fry mentions</i></span>`);
   if (r.grade) bits.push(`<span class="${dup("grade")}" title="Our grade from Dane County inspection results, not an official grade"><span class="grade sm g-${r.grade}">${r.grade}</span> <i>our inspection grade</i></span>`);''',
   '''  if (r.in_r != null) bits.push(`<span class="${dup("grade")}" title="Latest routine inspection, as the Detroit Health Department published it">${resPill(r)} <i>${r.in_p} priority violations · ${esc(r.addr || "")} · inspected ${esc(r.in_d)}</i></span>`);''')

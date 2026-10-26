@@ -1,0 +1,69 @@
+{
+ "schema": 1,
+ "version": "2026-10-22.1",
+ "records_through": "2026-10-22",
+ "published": "2026-10-26T14:19:50Z",
+ "min_app_build": 1,
+ "files": {
+  "detail-ann-arbor-southeast": {
+   "path": "detail-ann-arbor-southeast-a119475e01c2.json",
+   "sha256": "a119475e01c24cd359c39a8011018fb91ef216ec47cb006da599e6be2e8a7c4d",
+   "bytes": 372672,
+   "rows": 2270
+  },
+  "detail-flint-saginaw-the-thumb": {
+   "path": "detail-flint-saginaw-the-thumb-8b728beef8e5.json",
+   "sha256": "8b728beef8e5859b1fc7d929ba828c13ab1dada8d4d91b2b3c4b3b192162f87f",
+   "bytes": 355107,
+   "rows": 2211
+  },
+  "detail-grand-rapids-west": {
+   "path": "detail-grand-rapids-west-62d1687734d3.json",
+   "sha256": "62d1687734d3a39b9b7306cfa6efdd20b57fe412fdaf9881d672b471c354e878",
+   "bytes": 549523,
+   "rows": 3447
+  },
+  "detail-kalamazoo-southwest": {
+   "path": "detail-kalamazoo-southwest-6a7cbccc4c87.json",
+   "sha256": "6a7cbccc4c872d32c848cb26dfe07e7b6c2227ad01e752f2e712e0228ec0e5b6",
+   "bytes": 293413,
+   "rows": 1590
+  },
+  "detail-lansing-mid-michigan": {
+   "path": "detail-lansing-mid-michigan-9ffb242cefa3.json",
+   "sha256": "9ffb242cefa3de119c3c3935070ba2f960a2aed54e1cfe93c8f1d324bb25de05",
+   "bytes": 360055,
+   "rows": 2214
+  },
+  "detail-metro-detroit": {
+   "path": "detail-metro-detroit-8fb6f4128dc9.json",
+   "sha256": "8fb6f4128dc97ccc57f761d69035288cee8b1db973d20338e8e04b988fb5193f",
+   "bytes": 1954105,
+   "rows": 11177
+  },
+  "detail-northern-michigan": {
+   "path": "detail-northern-michigan-9f8b5f0fa666.json",
+   "sha256": "9f8b5f0fa666c01e2e947b1fee0a0495b35f884309cf44cc21ab75a86303229b",
+   "bytes": 311887,
+   "rows": 2066
+  },
+  "detail-upper-peninsula": {
+   "path": "detail-upper-peninsula-c63e9721b277.json",
+   "sha256": "c63e9721b2773a92456f4126589e6a05e8de25109f4be1ce370b5f334ff2907f",
+   "bytes": 123282,
+   "rows": 835
+  },
+  "places": {
+   "path": "places-e326e710d092.json",
+   "sha256": "e326e710d092348c0964beb0dc545a8d22631473d80ecd9850193d7373bee762",
+   "bytes": 4259460,
+   "rows": 26491
+  }
+ },
+ "counts": {
+  "places": 26491,
+  "files": 9,
+  "bytes": 8579504,
+  "restaurants": 24830
+ }
+}

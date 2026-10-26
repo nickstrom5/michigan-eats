@@ -16,7 +16,7 @@ struct Search {
     static let tagPhrases: [(String, PlaceTags)] = [("coney islands", .coney), ("coney island", .coney), ("coneys", .coney), ("coney", .coney),
                                                    ("detroit style pizza", .detroitPizza), ("detroit style", .detroitPizza), ("square pizza", .detroitPizza),
                                                    ("pasties", .pasty), ("pasty", .pasty), ("paczki", .paczki), ("middle eastern", .middleEastern),
-                                                   ("fish fry", .fishFry), ("fish fries", .fishFry), ("supper club", .fishFry), ("supper clubs", .fishFry)]
+                                                   ("fish fry", .fishFry), ("fish fries", .fishFry), ("great lakes fish", .fishFry)]
 
     /// Lowercase, no accents or apostrophes, "&" as "and" ("B&B" stays "bb"), everything else a single space.
     /// One pass over the characters instead of three regular expressions: it runs four times per place at launch

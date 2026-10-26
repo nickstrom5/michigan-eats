@@ -6,6 +6,8 @@ import Foundation
 /// links to the custom domain after the switch, so a shipped build keeps working; point them at the new domain in the next update.
 enum Links {
     static let site = URL(string: "https://nickstrom5.github.io/michigan-eats/")!
+    /// The app's data updates: scripts/publish_app_data.py writes docs/data/app/ (OTA-DATA.md).
+    static let appData = URL(string: site.absoluteString + "data/app/")!
     static let privacy = URL(string: "https://nickstrom5.github.io/michigan-eats/privacy.html")!
     static let terms = URL(string: "https://nickstrom5.github.io/michigan-eats/terms.html")!
     /// MDARD's open list of the food service establishments Michigan's local health departments license (pages that open; checked with curl)

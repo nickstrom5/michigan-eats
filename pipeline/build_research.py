@@ -20,6 +20,7 @@ DD_PIZZA = "https://www.deadlinedetroit.com/articles/32857/metro_times_ranks_25_
 UP_PASTY = "https://www.uptravel.com/things-to-do/arts-history-and-culture/pasties/"
 WXYZ_PACZKI = "https://www.wxyz.com/news/paczki-day-2026-where-you-can-get-paczki-in-metro-detroit"
 VD_DEARBORN = "https://visitdetroit.com/inside-the-d/destination-dearborn/"
+UP_FOODS = "https://www.uptravel.com/blog/post/unique-foods/"   # dated Jul. 01, 2025 on the page
 
 # (name as the source writes it, town, [street number the source gives, if any], kinds, dishes, note, founded, founded_note, source)
 GUIDES = {
@@ -66,6 +67,11 @@ GUIDES = {
   ("Avon Donuts", "Pontiac", "45324", None, None, None),
   ("Donut Cutter", "Berkley", "28173", None, None, None),
  ],
+ "fish fry": [   # Great Lakes fish (whitefish, smoked fish, fish and chips); the page's fish markets aren't places to eat in our data
+  ("Cap'n Ron's Fish 'N' Chips", "Munising", "1336", "Fish baskets, sandwiches and smoked fish dip.", None, None),
+  ("Four Suns Fish & Chips", "Hancock", "49813", "Fish and chips in the Keweenaw.", None, None),
+  ("Thill and Sons Fish House", "Marquette", "250", "Marquette's fish house.", None, None),
+ ],
  "middle eastern": [
   ("Al Ameer", "Dearborn", "12710", "Lebanese; a James Beard America's Classic (2016).", None, None),
   ("Sheeba Restaurant", "Dearborn", None, "Yemeni.", None, None),
@@ -84,8 +90,8 @@ GUIDES = {
   ("Dellah Coffee & Brunch House", "Dearborn", None, "Yemeni and American brunch.", None, None),
  ],
 }
-SRC = {"coney": VD_CONEY, "detroit-style pizza": DD_PIZZA, "pasty": UP_PASTY, "paczki": WXYZ_PACZKI, "middle eastern": VD_DEARBORN}
-DATED = {DD_PIZZA, WXYZ_PACZKI}   # pages dated 2025-26 on their face; the others are current (c) 2026 tourism pages, undated
+SRC = {"coney": VD_CONEY, "detroit-style pizza": DD_PIZZA, "pasty": UP_PASTY, "paczki": WXYZ_PACZKI, "middle eastern": VD_DEARBORN, "fish fry": UP_FOODS}
+DATED = {DD_PIZZA, WXYZ_PACZKI, UP_FOODS}   # pages dated 2025-26 on their face; the others are current (c) 2026 tourism pages, undated
 
 JBF = [  # (name, town, honors, source)
  ("Al Ameer", "Dearborn", "12710", ["America's Classics 2016"], "https://archive.jamesbeard.org/blog/2016-americas-classic-al-ameer-restaurant"),
@@ -161,8 +167,12 @@ json.dump(jb, open(f"{R}/jbf.json", "w"), indent=1, ensure_ascii=False)
 open(f"{R}/app/LEADS.md", "w").write("# Michigan research leads (not yet verified)\n\nWritten by pipeline/build_research.py.\n\n" + "\n".join(leads) + """
 
 ## Not started
-- Fish fries and supper clubs (outstate): no usable 2025-26 list found yet; the Free Press, MLive and Record-Eagle block Claude.
+- Great Lakes fish: 3 places (UP Travel, Jul 2025). Its fish markets (Gustafson's and King's in Moran, Manley's in St. Ignace, Peterson's in
+  Hancock) aren't in our data as places to eat, and the page gives no addresses. Lenten fish fries are parish/VFW events, not restaurants.
+  Supper clubs (Alice's in Iron River, Whistle Stop in Menominee: UP Travel listings, undated; Nutini's in Hancock) need a dated source.
 - Flint-style coneys (Angelo's, Starlite, Koegel's): no 2025-26 page on a usable host yet.
+- hourdetroit.com answers Claude's fetcher with 403 (2026-10-23): treat it as blocked, like Metro Times. UP Travel's "since 1946" for Joe's
+  Pasty Shop is from a 2021 page, too old for the 2025-26 rule.
 - Oldest places beyond American Coney Island (1917): Buddy's (1946 at Conant), Joe's Pasty Shop (1946), Lehto's (1947), Zehnder's (1929):
   each needs a source that says it opened at this address.
 - Elephant & Co. (Detroit, Metro Times #5 pizza 2025): not in our data; Bar Chenin (James Beard Best New Bar finalist 2026) is inside

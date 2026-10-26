@@ -48,7 +48,7 @@
   // a dish ("whitefish", "loose burger") is not a tag: it's in each hand-checked place's search text, so it finds the places serving it
   const tagPhrases = [["coney islands", CONEY], ["coney island", CONEY], ["coneys", CONEY], ["coney", CONEY], ["detroit style pizza", DPIZZA],
     ["detroit style", DPIZZA], ["square pizza", DPIZZA], ["pasties", PASTY], ["pasty", PASTY], ["paczki", PACZKI], ["middle eastern", MIDEAST],
-    ["fish fries", FISHFRY], ["fish fry", FISHFRY], ["supper clubs", FISHFRY], ["supper club", FISHFRY]];
+    ["fish fries", FISHFRY], ["fish fry", FISHFRY], ["great lakes fish", FISHFRY]];
   function normalize(s) {
     let t = String(s || "").normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
     t = t.replace(/\b([a-z0-9])\s*&\s*([a-z0-9])\b/g, "$1$2").replace(/&/g, " and ").replace(/['’`]/g, "");
@@ -111,7 +111,7 @@
     pasty: { title: "Pasties", sub: "Hand-checked pasty shops, most of them in the U.P.", inc: hcTag(PASTY), sorts: HC_SORTS },
     paczki: { title: "Pączki Bakeries", sub: "Hand-checked pączki makers, Hamtramck and beyond", inc: hcTag(PACZKI), sorts: HC_SORTS },
     mideast: { title: "Middle Eastern", sub: "Hand-checked Lebanese, Yemeni and Iraqi kitchens and bakeries", inc: hcTag(MIDEAST), sorts: HC_SORTS },
-    fishfry: { title: "Fish Fry & Supper Clubs", sub: "Hand-checked Friday fish fries, perch and whitefish, supper clubs", inc: hcTag(FISHFRY), sorts: HC_SORTS },
+    fishfry: { title: "Great Lakes Fish", sub: "Hand-checked whitefish, smoked fish and fish and chips", inc: hcTag(FISHFRY), sorts: HC_SORTS },
     honors: { title: "James Beard Honors", sub: "James Beard winners, finalists and America's Classics", inc: (p) => p.jb, sorts: ["iconic", "nearest"] },
     oldest: { title: "Oldest Places", sub: "Founding years checked at the same address, oldest first", inc: (p) => p.f != null && p.hc && Boolean(p.g & OLDEST), sorts: ["oldest"], ranked: true },
     // no "not in compliance" list at the top: that order is a sort a reader picks, never the page's default
@@ -126,7 +126,7 @@
   const bandOf = (b) => (Number.isInteger(b) && b >= 0 && b < RESULTS.length ? RESULTS[b] : "");
   // "Not in compliance" is amber, not red: it isn't a closure
   const resCls = (b) => { const l = bandOf(b); return l === "Not in compliance" ? "mid" : l ? "ok" : "x"; };
-  const CHIP = [[CONEY, "Coney island"], [DPIZZA, "Detroit-style pizza"], [PASTY, "Pasties"], [PACZKI, "Pączki"], [MIDEAST, "Middle Eastern"], [FISHFRY, "Fish fry"]];
+  const CHIP = [[CONEY, "Coney island"], [DPIZZA, "Detroit-style pizza"], [PASTY, "Pasties"], [PACZKI, "Pączki"], [MIDEAST, "Middle Eastern"], [FISHFRY, "Great Lakes fish"]];
   const FIRST = "coney";   // the guide the page opens on
 
   // ---------------------------------------------------------------- state

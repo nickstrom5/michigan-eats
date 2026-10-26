@@ -32,14 +32,16 @@ Products (same three as every state):
   robots block). Ottawa County's ArcGIS layer has per-place report links (not wired in).
 - Calibration (statewide vs MDARD): Meta + Google-open 77%, Meta ≥0.95 76%, Foursquare-only 6.6%.
 - Press hosts: Metro Times answers our fetcher 403 (treat as blocked); Free Press, MLive, Detroit News, Eater, Record-Eagle, Lansing State
-  Journal, Outlier, Crain's block. Usable: Visit Detroit, Deadline Detroit, WXYZ, Fox 2, Hour Detroit, uptravel.com, jamesbeard.org.
+  Journal, Outlier, Crain's block. Usable: Visit Detroit, Deadline Detroit, WXYZ, Fox 2, uptravel.com (Hour Detroit answered
+  403 on 2026-10-23), jamesbeard.org.
   **itunes.apple.com robots-blocks Claude**: don't use the iTunes Search API.
 
 ## Hand-checked guides
 `pipeline/build_research.py` writes `data/research/app/*.json` and `jbf.json` from compact lists: each entry cites its 2025-26 page, the
 address comes from our own data for that name in that town, and an undated page needs an active MDARD license (or a 2025-26 Detroit
-routine inspection) as the evidence the place operates. Leads it couldn't confirm: `data/research/app/LEADS.md` (fish fries and supper
-clubs, Flint coneys and oldest places not started). Guides with no places are hidden on Home and in the leaderboard.
+routine inspection) as the evidence the place operates. Leads it couldn't confirm: `data/research/app/LEADS.md`. The fish guide is
+"Great Lakes Fish" (whitefish, smoked fish, fish and chips; 3 places from UP Travel, Jul 2025): Michigan's Lenten fish fries are parish/VFW
+events, not restaurants. Supper clubs, Flint coneys and more oldest places still need 2025-26 sources (hourdetroit.com now answers 403). Guides with no places are hidden on Home and in the leaderboard.
 
 ## Rebuild
 ```bash

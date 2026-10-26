@@ -241,12 +241,12 @@ struct PlaceTags: OptionSet, Hashable {
     static let pasty = PlaceTags(rawValue: 4)       // hand-checked pasty shops
     static let paczki = PlaceTags(rawValue: 8)      // hand-checked pączki bakeries
     static let middleEastern = PlaceTags(rawValue: 16)  // hand-checked Middle Eastern (Dearborn and beyond)
-    static let fishFry = PlaceTags(rawValue: 32)    // hand-checked fish fries and supper clubs
+    static let fishFry = PlaceTags(rawValue: 32)    // hand-checked Great Lakes fish: whitefish, smoked fish, fish and chips
     static let oldest = PlaceTags(rawValue: 64)     // hand-checked, open at this address since 1960 or earlier
 
     /// the chips and Spotlight words for the hand-checked guides
     static let labels: [(PlaceTags, String)] = [(.coney, "Coney island"), (.detroitPizza, "Detroit-style pizza"), (.pasty, "Pasties"),
-                                                (.paczki, "Pączki"), (.middleEastern, "Middle Eastern"), (.fishFry, "Fish fry")]
+                                                (.paczki, "Pączki"), (.middleEastern, "Middle Eastern"), (.fishFry, "Great Lakes fish")]
 }
 
 /// How a place got on the list. The share that matched a license comes from calibration.

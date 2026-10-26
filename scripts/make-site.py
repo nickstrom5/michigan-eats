@@ -52,6 +52,7 @@ EMAIL = "nick@eatsranked.com"   # Nick, 2026-10-12: the site's contact address (
 PUBLISHED = "2026-10-22"        # the site's first publication (Article datePublished)
 SITE_REV = "2026-10-22"         # the last change to this generator's own copy or code: bump it when you change the words
 POLICY_UPDATED = "2026-10-22"   # privacy policy and terms: bump only when their text changes
+PRIVACY_UPDATED = "2026-10-26"   # the privacy policy alone: the app's data updates (OTA-DATA.md)
 CHECKED = "fall 2026"
 STORAGE_PREFIX = "mieats-"      # the web app's localStorage keys (other state sites share the nickstrom5.github.io origin)
 # Michigan Eats is one of the Eats Ranked state sites: the hub (eatsranked.com) lists it as a subOrganization, and every page says so
@@ -597,7 +598,7 @@ class Anchors:
         return f"{self.page_url}#{self.of[id(p)]}"
 
 
-CHIPS = [(CONEY, "Coney island"), (DPIZZA, "Detroit-style pizza"), (PASTY, "Pasties"), (PACZKI, "Pączki"), (MIDEAST, "Middle Eastern"), (FISHFRY, "Fish fry")]
+CHIPS = [(CONEY, "Coney island"), (DPIZZA, "Detroit-style pizza"), (PASTY, "Pasties"), (PACZKI, "Pączki"), (MIDEAST, "Middle Eastern"), (FISHFRY, "Great Lakes fish")]
 
 
 def place_item(p, anchors=None, show_fn=False, honors=False):
@@ -684,7 +685,7 @@ OLD_PATH = "michigan-oldest-restaurants.html"
 GUIDE_PATH = {"coney": "michigan-coney-islands.html", "dpizza": "detroit-style-pizza.html", "pasty": "michigan-pasties.html",
               "paczki": "michigan-paczki.html", "mideast": "dearborn-middle-eastern.html", "fishfry": "michigan-fish-fry.html"}
 GUIDE_NAME = {"coney": "Coney islands", "dpizza": "Detroit-style pizza", "pasty": "Pasties", "paczki": "Pączki",
-              "mideast": "Middle Eastern in Dearborn", "fishfry": "Fish fries & supper clubs"}
+              "mideast": "Middle Eastern in Dearborn", "fishfry": "Great Lakes fish"}
 GUIDE_LINKS = ([("/" + GUIDE_PATH[k], GUIDE_NAME[k]) for k, _ in GUIDE_TAGS]
                + ([("/" + OLD_PATH, "Oldest restaurants")] if HAS_OLD else [])
                + [("/" + HON_PATH, "James Beard honors"), ("/" + INS_PATH, "Detroit restaurant inspections")])
@@ -1302,7 +1303,7 @@ desc = fit([f"Look up {N_REST:,} Michigan restaurants by name, town, street, zip
            140, 160, "explore description")
 nav, bc = crumbs([("Home", "/"), ("Search", "/explore/")])
 WEB_GUIDES = [(k, t) for k, t in (("coney", "Coney islands"), ("dpizza", "Detroit-style pizza"), ("pasty", "Pasties"), ("paczki", "Pączki"),
-                                   ("mideast", "Middle Eastern"), ("fishfry", "Fish fry & supper clubs")) if L_ALL[k]]
+                                   ("mideast", "Middle Eastern"), ("fishfry", "Great Lakes fish")) if L_ALL[k]]
 guide_buttons = "".join(f'<button type="button" data-g="{k}" aria-pressed="false">{e(t)}</button>' for k, t in
                         WEB_GUIDES + [("honors", "James Beard"), ("oldest", "Oldest"), ("inspections", "Detroit inspections"),
                                       ("all", "All restaurants"), ("saved", "Saved")])
@@ -1497,7 +1498,7 @@ body = f"""{nav}
   <main id="main" class="legal">
   <section class="hero">
     <h1>Privacy policy</h1>
-    <p class="lede">Short version: the {BRAND} app collects nothing about you, and this website doesn't track you. Last updated {POLICY_UPDATED}.</p>
+    <p class="lede">Short version: the {BRAND} app collects nothing about you, and this website doesn't track you. Last updated {PRIVACY_UPDATED}.</p>
   </section>
   <section>
     <h2>The app</h2>
@@ -1506,6 +1507,7 @@ body = f"""{nav}
       <li><b>Location.</b> If you allow it, your location is used on your device to sort places by distance and show where you are on the map. It is never sent to us. You can turn it off in Settings at any time.</li>
       <li><b>Saved places and filters</b> are stored only on your device and are deleted when you delete the app.</li>
       <li><b>Apple Maps.</b> When you open a place's ratings, hours and photos, or ask for directions, the app asks Apple Maps for that place. Apple handles that request under <a href="https://www.apple.com/legal/privacy/" rel="noopener">Apple's privacy policy</a>, as it does for any app that shows a map.</li>
+      <li><b>Data updates.</b> When you open the app, it checks this website for newer restaurant data, at most once a day (or an hour later if a check didn't go through), and downloads it when there is some. These requests carry no location or identifiers. GitHub, which hosts this site, may keep standard server logs of them, as it does for any visit here.</li>
       <li><b>Spotlight.</b> The app adds its hand-checked and honored places to your device's search index so you can find them from Spotlight. That index stays on your device.</li>
       <li><b>Calls, websites and email</b> you start from a place open in the Phone app, your browser or Mail, and are handled by them.</li>
     </ul>
