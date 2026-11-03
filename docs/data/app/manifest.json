@@ -1,8 +1,8 @@
 {
  "schema": 1,
- "version": "2026-10-22.1",
- "records_through": "2026-10-22",
- "published": "2026-10-26T14:19:50Z",
+ "version": "2026-10-29.1",
+ "records_through": "2026-10-29",
+ "published": "2026-10-30T02:03:28Z",
  "min_app_build": 1,
  "files": {
   "detail-ann-arbor-southeast": {
@@ -24,10 +24,10 @@
    "rows": 3447
   },
   "detail-kalamazoo-southwest": {
-   "path": "detail-kalamazoo-southwest-6a7cbccc4c87.json",
-   "sha256": "6a7cbccc4c872d32c848cb26dfe07e7b6c2227ad01e752f2e712e0228ec0e5b6",
-   "bytes": 293413,
-   "rows": 1590
+   "path": "detail-kalamazoo-southwest-09e05aef60c4.json",
+   "sha256": "09e05aef60c40a8b257522f63981d622dee5e457889ba4f69b81df1b7aba7d83",
+   "bytes": 293197,
+   "rows": 1589
   },
   "detail-lansing-mid-michigan": {
    "path": "detail-lansing-mid-michigan-9ffb242cefa3.json",
@@ -48,22 +48,36 @@
    "rows": 2066
   },
   "detail-upper-peninsula": {
-   "path": "detail-upper-peninsula-c63e9721b277.json",
-   "sha256": "c63e9721b2773a92456f4126589e6a05e8de25109f4be1ce370b5f334ff2907f",
-   "bytes": 123282,
+   "path": "detail-upper-peninsula-13b365daaf5f.json",
+   "sha256": "13b365daaf5f1ed4874f628e3b88271263f2471461c34ace02dece549e2ba119",
+   "bytes": 123245,
    "rows": 835
   },
   "places": {
-   "path": "places-e326e710d092.json",
-   "sha256": "e326e710d092348c0964beb0dc545a8d22631473d80ecd9850193d7373bee762",
-   "bytes": 4259460,
-   "rows": 26491
+   "path": "places-c73bb3337e0a.json",
+   "sha256": "c73bb3337e0a90c8ef7070fbcc064578df7748218761e9a5c4ea80501af24107",
+   "bytes": 4259475,
+   "rows": 26490
   }
  },
  "counts": {
-  "places": 26491,
+  "places": 26490,
   "files": 9,
-  "bytes": 8579504,
-  "restaurants": 24830
+  "bytes": 8579266,
+  "restaurants": 24829
+ },
+ "previous": {
+  "version": "2026-10-22.1",
+  "files": {
+   "detail-ann-arbor-southeast": "detail-ann-arbor-southeast-a119475e01c2.json",
+   "detail-flint-saginaw-the-thumb": "detail-flint-saginaw-the-thumb-8b728beef8e5.json",
+   "detail-grand-rapids-west": "detail-grand-rapids-west-62d1687734d3.json",
+   "detail-kalamazoo-southwest": "detail-kalamazoo-southwest-6a7cbccc4c87.json",
+   "detail-lansing-mid-michigan": "detail-lansing-mid-michigan-9ffb242cefa3.json",
+   "detail-metro-detroit": "detail-metro-detroit-8fb6f4128dc9.json",
+   "detail-northern-michigan": "detail-northern-michigan-9f8b5f0fa666.json",
+   "detail-upper-peninsula": "detail-upper-peninsula-c63e9721b277.json",
+   "places": "places-e326e710d092.json"
+  }
  }
 }
