@@ -189,13 +189,14 @@ final class MichiganEatsTests: XCTestCase {
         let raw = try Data(contentsOf: Bundle.main.url(forResource: "places", withExtension: "json")!)
         var file = try XCTUnwrap(JSONSerialization.jsonObject(with: raw) as? [String: Any])
         var places = try XCTUnwrap(file["places"] as? [[String: Any]])
-        let idx = places.indices.filter { places[$0]["v"] == nil }.prefix(8).map { $0 }
+        let idx = places.indices.filter { places[$0]["v"] == nil }.prefix(9).map { $0 }
         places[idx[2]]["n"] = "Deja Vu Showgirls"
         places[idx[3]]["n"] = "Kitchen the"
         places[idx[4]]["n"] = "GREAT LAKES HOSPITALITY GROUP LLC"
         places[idx[5]]["n"] = "Tipsy Nails & Spa"
         places[idx[6]]["n"] = "Skin Gentleman's Lounge"
         places[idx[7]]["a"] = "1336 Ravine Rd"; places[idx[7]]["c"] = (file["cities"] as? [String])?.firstIndex(of: "Kalamazoo")
+        places[idx[8]]["n"] = "The Meltdown"
         file["places"] = places
         let url = FileManager.default.temporaryDirectory.appendingPathComponent("places-broken.json")
         try JSONSerialization.data(withJSONObject: file).write(to: url)
@@ -215,6 +216,7 @@ final class MichiganEatsTests: XCTestCase {
         caught(DataGuards.nonRestaurants(m.places), 5, "a nail salon shown as a restaurant")
         caught(DataGuards.adultVenues(m.places), 6, "a club name the first rule missed (QA 2026-10-29)")
         caught(DataGuards.adultAddresses(m.places), 7, "a place at Little Darlings' address")
+        caught(DataGuards.nonRestaurants(m.places), 8, "a Denny's delivery-only brand shown as a restaurant (QA 2026-10-29)")
     }
 }
 
@@ -286,7 +288,8 @@ enum DataGuards {
     }
 
     /// businesses that aren't places to eat, among the places shown by default
-    static let nonRestaurantNames = #"\bnails?\b|assisted living|gun (?:club|range|shop|store)|shooting range|firearms|petroleum|\bauto (?:repair|parts)\b"#
+    /// and delivery-only brands cooked in another restaurant's kitchen: Denny's The Meltdown, The Burger Den and Banda Burrito (QA 2026-10-29)
+    static let nonRestaurantNames = #"\bnails?\b|assisted living|gun (?:club|range|shop|store)|shooting range|firearms|petroleum|\bauto (?:repair|parts)\b|^(?:the )?(?:meltdown|burger den)$|banda burrito|tenderfix|pardon my cheesesteak|neighborhood wings"#
 
     static func nonRestaurants(_ places: [Place]) -> [String] {
         places.filter { !$0.isVenue && $0.name.range(of: nonRestaurantNames, options: [.regularExpression, .caseInsensitive]) != nil }
