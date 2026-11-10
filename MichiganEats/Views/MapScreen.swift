@@ -177,9 +177,9 @@ struct ClusteredMap: UIViewRepresentable {
         map.pointOfInterestFilter = .excludingAll
         map.register(PlaceMarker.self, forAnnotationViewWithReuseIdentifier: PlaceMarker.id)
         map.register(ClusterMarker.self, forAnnotationViewWithReuseIdentifier: MKMapViewDefaultClusterAnnotationViewReuseIdentifier)
-        // the whole state, Pensacola to Key West
-        map.setRegion(MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 31.2, longitude: -99.9),
-                                         span: MKCoordinateSpan(latitudeDelta: 11.5, longitudeDelta: 13.6)), animated: false)
+        // the whole state, both peninsulas, Ironwood to Detroit (set per state: a copied region opens the map over another state)
+        map.setRegion(MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 45.02, longitude: -86.26),
+                                         span: MKCoordinateSpan(latitudeDelta: 7.5, longitudeDelta: 9.4)), animated: false)
         let start = map.region
         DispatchQueue.main.async { onRegion(start) }
         return map
