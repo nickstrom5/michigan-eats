@@ -1,0 +1,63 @@
+{
+ "schema": 2,
+ "version": "2026-11-03.1",
+ "records_through": "2026-11-03",
+ "min_app_build": 1,
+ "files": {
+  "detail-ann-arbor-southeast": {
+   "path": "detail-ann-arbor-southeast-3c5553f24ed1.json",
+   "sha256": "3c5553f24ed1036dc976e37e346a5fd51641c6422c82e33d8a9313ec5f98d11d",
+   "bytes": 381792
+  },
+  "detail-flint-saginaw-the-thumb": {
+   "path": "detail-flint-saginaw-the-thumb-93fdac3bf251.json",
+   "sha256": "93fdac3bf251331f298b0296c6f9becfe70750f1b610d51b09513372cd09ae65",
+   "bytes": 364137
+  },
+  "detail-grand-rapids-west": {
+   "path": "detail-grand-rapids-west-aae29f4ff108.json",
+   "sha256": "aae29f4ff1085f27d5b3c1227fb8bcc9242899629970fbe2c470d50e7aa7beef",
+   "bytes": 563113
+  },
+  "detail-kalamazoo-southwest": {
+   "path": "detail-kalamazoo-southwest-9e926c53ccc4.json",
+   "sha256": "9e926c53ccc4deaa512234e993e488da501f3f7a237219703494685216671760",
+   "bytes": 299687
+  },
+  "detail-lansing-mid-michigan": {
+   "path": "detail-lansing-mid-michigan-b06ae01f13b7.json",
+   "sha256": "b06ae01f13b7d046a7417a381515703b3411f11fd1d24ddb2ecfe8c5ed98812b",
+   "bytes": 368600
+  },
+  "detail-metro-detroit": {
+   "path": "detail-metro-detroit-6de2768b206e.json",
+   "sha256": "6de2768b206ea81bf39aab86ab7796853b6d469a614ecfc94a0972581d926cf7",
+   "bytes": 1995455
+  },
+  "detail-northern-michigan": {
+   "path": "detail-northern-michigan-97206854cbbe.json",
+   "sha256": "97206854cbbe3cf0102fb052a79a9b4126293085a0279c604134d3c6f49f12ed",
+   "bytes": 319317
+  },
+  "detail-upper-peninsula": {
+   "path": "detail-upper-peninsula-d73e9ebdbf82.json",
+   "sha256": "d73e9ebdbf82b06e8e070174dbc71e8816326466e3ce420e8c917c757ad1b84b",
+   "bytes": 126260
+  },
+  "places": {
+   "path": "places-304c1e8a346e.json",
+   "sha256": "304c1e8a346e2629ad5615699a80281434f52d6d156df2c2ea14472923040243",
+   "bytes": 4422198
+  },
+  "state": {
+   "path": "state-b525f8a11a69.json",
+   "sha256": "b525f8a11a698e3afda236b600f70e8dcee3fd3a2206c6be96a64d5fc5031d41",
+   "bytes": 20029
+  }
+ },
+ "counts": {
+  "places": 26490,
+  "restaurants": 24809,
+  "bytes": 8860588
+ }
+}
